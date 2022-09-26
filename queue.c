@@ -2,81 +2,6 @@
 #include<stdlib.h>
 #define MAX 7
 
-void red();
-void green();
-void blue();
-void purple();
-void cyan();
-void load_file();
-void save_file();
-void insert();
-void delete();
-void display();
-void search();
-void sort_queue();
-void reverse();
-int priority_queue();
-void enqueue_pr();
-void dequeue_pr();
-void display_pr();
-int peek();
-int isFull();
-int circular_queue();
-void cq_insert();
-void cq_delete();
-void cq_display();
-
-int queue_array[];
-int rear = - 1;
-int front = - 1;
-int idx = -1;
-char pqVal[];
-int pqPriority[];
-int rr = - 1;
-int fr = - 1;
-int queue_array_c[MAX];
-
-//main menu
-int main(){
-    int choice;
-    printf("\n");
-    
-    while (1){
-        blue();printf("\n");
-        printf("1. Insert element to queue (queue) \n");
-        printf("2. Delete element from queue (dequeue) \n");
-        printf("3. Display all elements of queue \n");
-        printf("4. Open file \n");
-        printf("5. Save to a file \n");
-        printf("6. Search in queue \n");
-        printf("7. Sort elements \n");
-        printf("8. Reverse queue \n");
-        printf("9. Go to priority queue menu \n");
-        printf("10. Go to circular queue menu \n");
-        printf("0. Quit \n");
-        cyan();
-        printf("Enter your choice: ");
-
-        scanf("%d", &choice);
-
-        switch(choice){
-        case 1: insert(); break;
-        case 2: delete(); break;
-        case 3: display(); break;
-        case 4: load_file(); break;
-        case 5: save_file(); break;
-        case 6: search(); break;
-        case 7: sort_queue(); break;
-        case 8: reverse(); break;
-        case 9: priority_queue(); break;
-        case 10: circular_queue(); break;
-        case 0: exit(1);
-        default: red();printf("Input error. Try again. \n");
-        }
-        printf("\n");
-    }
-}
-
 void red(){
   printf("\033[1;31m");
 }
@@ -402,3 +327,56 @@ void cq_display(){
         printf("%d ", queue_array_c[i]);
     }
 }
+
+
+int queue_array[];
+int rear = - 1;
+int front = - 1;
+int idx = -1;
+char pqVal[];
+int pqPriority[];
+int rr = - 1;
+int fr = - 1;
+int queue_array_c[MAX];
+
+//main menu
+int main(){
+    int choice;
+    printf("\n");
+    
+    while (1){
+        blue();printf("\n");
+        printf("1. Insert element to queue (queue) \n");
+        printf("2. Delete element from queue (dequeue) \n");
+        printf("3. Display all elements of queue \n");
+        printf("4. Open file \n");
+        printf("5. Save to a file \n");
+        printf("6. Search in queue \n");
+        printf("7. Sort elements \n");
+        printf("8. Reverse queue \n");
+        printf("9. Go to priority queue menu \n");
+        printf("10. Go to circular queue menu \n");
+        printf("0. Quit \n");
+        cyan();
+        printf("Enter your choice: ");
+
+        scanf("%d", &choice);
+
+        switch(choice){
+        case 1: insert(); break;
+        case 2: delete(); break;
+        case 3: display(); break;
+        case 4: load_file(); break;
+        case 5: save_file(); break;
+        case 6: search(); break;
+        case 7: sort_queue(); break;
+        case 8: reverse(); break;
+        case 9: priority_queue(); break;
+        case 10: circular_queue(); break;
+        case 0: exit(1);
+        default: red();printf("Input error. Try again. \n");
+        }
+        printf("\n");
+    }
+}
+
